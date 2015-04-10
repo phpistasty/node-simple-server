@@ -1,11 +1,11 @@
+var filedataHandler = require("../util/filedataHandler");
+
 var stubRoutes = {
     register : function(server, options, next){
         server.route({
-           method : "GET",
-            path : "/stubRoutes",
-            handler : function(req, reply){
-
-            }
+            method : "GET",
+            path : "/example",
+            handler : filedataHandler("./data/example.json")
         });
         next();
     }
