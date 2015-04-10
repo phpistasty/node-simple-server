@@ -1,0 +1,17 @@
+{
+  "name": "node-fake-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "author": "Steve Morgan",
+  "license": "ISC",
+  "dependencies": {
+    "convict": "^0.6.1",
+    "hapi": "^8.4.0",
+    "when": "^3.7.2"
+  }
+}
