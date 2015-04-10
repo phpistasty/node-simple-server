@@ -4,13 +4,15 @@ var config = require("./config");
 var server = new Hapi.Server();
 
 server.connection({
-    port: config.get('port')
+    port: config.get("port")
 });
 
+
+
 server.register([
-    { register : require('./plugins/example-routes') }
+    { register : require("./plugins/example-routes") }
 ], function(){
     server.start(function () {
-        console.log('Server running at:', server.info.uri);
+        console.log("Server running at:", server.info.uri);
     });
 });
