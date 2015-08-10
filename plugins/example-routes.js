@@ -2,11 +2,17 @@ var filedataHandler = require("../util/filedataHandler");
 
 var stubRoutes = {
     register : function(server, options, next){
-        server.route({
+        server.route([{
             method : "GET",
             path : "/example",
             handler : filedataHandler("./data/example.json")
-        });
+        }, {
+            method : "GET",
+            path : "/timeout",
+            handler : function(req, res){
+                res({success : false, message : "Error case called"}).code(401);
+            }
+        }]);
         next();
     }
 };
